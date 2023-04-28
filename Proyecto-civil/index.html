@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!----===== Boxicons CSS ===== -->
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./main.css">
+    <title>Formulario</title>
+    
+</head>
+
+<body class="body">
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img title="Univercidad Catolica Luis Amigó" src="./img/logo.png"
+                        alt="Logo Univercidad Catolica Luis Amigó">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Nombre pagina</span>
+                    <span class="profession">slogan</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+
+
+                <ul class="menu-links">
+
+                    <li class="nav-link">
+
+                        <a href="index.html" onmouseover="activar('.Formulario')"
+                            onmouseout="desactivar('.Formulario')">
+                            <i class='bx bx-edit icon'></i>
+                            <p class="Formulario activo">Formulario</p>
+
+                            <span class="text nav-text">Ingresar Formulario</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="info/info.html" onmouseover="activar('.info')" onmouseout="desactivar('.info')">
+                            <i class='bx bx-info-circle icon'></i>
+                            <p class="info activo">Más Información</p>
+                            <span class="text nav-text">Acerca del Formulario</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="inicio secion/iniciosecion.html" onmouseover="activar('.Iniciar-sesion')"
+                            onmouseout="desactivar('.Iniciar-sesion')">
+                            <i class='bx bx-log-in icon'></i>
+                            <p class="Iniciar-sesion activo">Iniciar Sesión</p>
+                            <span class="text nav-text">Iniciar Sesión</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+            <div class="bottom-content">
+                <li class="salir-sesion">
+                    <a class="" href="#" onmouseover="activar('.salir')" onmouseout="desactivar('.salir')">
+                        <i class='bx bx-log-out icon '></i>
+                        <p class="salir activo">Cerrar Sesión</p>
+                        <span class="text nav-text">Cerrar Sesión</span>
+                    </a>
+                </li>
+                <div class="modo">
+                    <i class='bx bx-moon icon luna'></i>
+                    <i class='bx bx-sun icon sol'></i>
+                </div>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="selector">
+                        <span class="sw"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section style="text-align: center;" class="home">
+        <div class="fondo-imagen quitar">
+            <section class="imagen">
+                <img class="imagenn" alt="Imagen">
+            </section>
+
+            <button onclick="exit()" class="boton-imagen">Cerrar</button>
+        </div>
+        <h1 id="h1" class="text h1">Formulario</h1>
+        <form id="formulario" class="form" action="index.html" onsubmit="return validar(event)">
+            <section class="pregunta condicion continuar0">
+                <label class="text" for="primernombre">Ingresa el primer nombre</label>
+                <input id="primernombre" name="primernombre" type="text" pattern="[A-Za-z]+" placeholder="Primer nombre"
+                    required>
+                <label class="text" for="segundonombre">Ingresa el segundo nombre</label>
+                <input id="segundonombre" name="segundonombre" type="text" pattern="[A-Za-z]+"
+                    placeholder="Segundo nombre">
+                <label class="text" for="primerapellido">Ingresa el primer apellido</label>
+                <input id="primerapellido" name="primerapellido" type="text" pattern="[A-Za-z]+"
+                    placeholder="Primer apellido" required>
+                <label class="text" for="segundoapellido">Ingresa el segundo apellido</label>
+                <input id="segundoapellido" name="segundoapellido" type="text" pattern="[A-Za-z]+"
+                    placeholder="Segundo apellido" required>
+                <label class="text" for="celular">Ingrese su numero de celular o telefono fijo</label>
+                <input id="celular" pattern="[0-9]+" name="celular" type="tel" placeholder="Numero de celular" required>
+                <label class="text" for="correo">Ingrese su correo electronico</label>
+                <input id="correo" name="correo" type="text" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+                    placeholder="correo electronico" required>
+                <label class="text" for="cedula">Ingrese su numero de Cedula</label>
+                <input id="cedula" pattern="[0-9]+" name="cedula" type="tel" placeholder="Cedula" required>
+                <label class="text" for="direccion">Ingrese su dirección</label>
+                <input id="direccion" name="direccion"  type="text" placeholder="direccion"
+                    required>
+                <label class="text" for="unidad-edicifio">Ingrese el nombre de la unidad o edificación(opcional)</label>
+                <input id="unidad-edicifio" name="unidad-edicifio" type="text" pattern="[A-Za-z]+"
+                    placeholder="unidad-edicifio">
+                <label class="text" for="departamento">Ingrese el nombre del departamento en el que se encuentra</label>
+                <input id="departamento" name="departamento" type="text" pattern="[A-Za-z]+" placeholder="Departamento"
+                    required>
+                <label class="text" for="municipio">Ingrese el nombre del municipio en el que se encuentra</label>
+                <select onchange="validar_municipio()" name="municipio" id="municipio">
+                    <option value="">Caldas</option>
+                    <option value="">La estrella</option>
+                    <option value="">Sabaneta</option>
+                    <option value="">Itagui</option>
+                    <option value="">Envigado</option>
+                    <option value="">Medellin-El poblado</option>
+                    <option value="">Medellin-Guayabal</option>
+                    <option value="">Medellin-Belen</option>
+                    <option value="">Medellin-La america</option>
+                    <option value="">Medellin-Laureles estadio</option>
+                    <option value="">Medellin-La candelaria</option>
+                    <option value="">Medellin-Buenos aires</option>
+                    <option value="">Medellin-Villa hermosa</option>
+                    <option value="">Medellin-Robledo</option>
+                    <option value="">Medellin-12 de octubre</option>
+                    <option value="">Medellin-Castilla</option>
+                    <option value="">Medellin-Aranjuez</option>
+                    <option value="">Medellin-Manrique</option>
+                    <option value="">Medellin-Santa cruz</option>
+                    <option value="">Medellin-popular</option>
+                    <option value="">Bello</option>
+                    <option value="">Copacabana</option>
+                    <option value="">Girardota</option>
+                    <option value="">Barbosa</option>
+                </select>
+                <label class="text" for="barrio">Ingrese el nombre del barrio o vereda en el que se encuentra</label>
+                <select name="barrio" id="barrio">
+                    <option value=''>Barrios unidos</option>
+                    <option value=''>La pradera</option>
+                    <option value=''>Aburra sur</option>
+                    <option value=''>Barrio nuevo</option>
+                    <option value=''>los cerezos</option>
+                    <option value=''>Cristo rey</option>
+                    <option value=''>Olaya herrera</option>
+                    <option value=''>La docena</option>
+                    <option value=''>La inmaculada</option>
+                    <option value=''>Felipe Echavarría No. 1</option>
+                    <option value=''>Felipe Echavarría No. 2</option>
+                    <option value=''>La Chuscala</option>
+                    <option value=''>El Minuto</option>
+                    <option value=''>La Planta</option>
+                    <option value=''>Las Margaritas</option>
+                    <option value=''>La Acuarela y/o La Rivera</option>
+                    <option value=''>Zona Centro</option>
+                    <option value=''>Andalucía</option>
+                    <option value=''>La Goretti</option>
+                    <option value=''>El Socorro</option>
+                    <option value=''>Juan XXIII</option>
+                    <option value=''>Villa Capri</option>
+                    <option value=''>La Buena Esperanza</option>
+                    <option value=''>Fundadores</option>
+                    <option value=''>Centenario</option>
+                    <option value=''>Mandalay</option>
+                    <option value=''>La Playita</option>
+                    <option value=''>La aguacatala</option>
+                    <option value=''>Bellavista</option>
+                    <option value=''>El Porvenir</option>
+                    <option value=''>Primavera</option>
+                    <option value=''>La Locería</option>
+                    <option value=''>Vereda la tolva</option>
+                    <option value=''>vereda el cano</option>
+                    <option value=''>vereda la raya</option>
+                    <option value=''>verada la corrala</option>
+                    <option value=''>vereda la miel</option>
+                    <option value=''>vereda la valeria</option>
+                    <option value=''>vereda la corralita</option>
+                    <option value=''>vereda el potrerillo</option>
+                    <option value=''>vereda La Maní de Cardal </option>
+                    <option value=''>vereda Sinífana</option>
+                    <option value=''>vereda Cardalito</option>
+                    <option value=''>vereda Salinas</option>
+                    <option value=''>vereda La Salada (Parte Alta)</option>
+                    <option value=''>vereda La Salada (Parte Baja)</option>
+                    <option value=''>vereda La Calle</option>
+                    <option value=''>vereda La Clara</option>
+                    <option value=''>vereda La Quiebra</option>
+                    <option value=''>vereda La Chuscala</option>
+                    <option value=''>vereda El Raizal</option>
+                    <option value=''>vereda Minas</option>
+                    <option value=''>vereda Minuto de Dios</option>
+                </select>
+                <hr>
+                <h2 class="text">¿Cuál es su nivel de formación?</h2>
+                <section class="pregunta condicion">
+                    <input name="NivelFormacion" value="Primaria" id="Primaria" type="radio" required>
+                    <label class="label-radio label text" for="Primaria">Primaria</label> <br>
+                    <input name="NivelFormacion" value="Bachillerato" id="Bachillerato" type="radio">
+                    <label class="label-radio label text" for="Bachillerato">Bachillerato</label> <br>
+                    <input name="NivelFormacion" value="Tecnico" id="Tecnico" type="radio" required>
+                    <label class="label-radio label text" for="Tecnico">Técnico</label> <br>
+                    <input name="NivelFormacion" value="Tecnologo" id="Tecnologo" type="radio">
+                    <label class="label-radio label text" for="Tecnologo">Tecnólogo</label><br>
+                    <input name="NivelFormacion" value="Univercitario" id="Univercitario" type="radio">
+                    <label class="label-radio label text" for="Univercitario">Universitario</label> <br>
+                    <input name="NivelFormacion" value="Ninguna" id="Ninguna" type="radio">
+                    <label class="label-radio label text" for="Ninguna">Ninguna</label> <br>
+                </section>
+                <hr>
+                <h2 class="text">¿En que año se construyo la vivienda?</h2>
+                <section class="pregunta condicion">
+                    <input name="year" value="Antes de 1963" id="1963" type="radio" required>
+                    <label class="label-radio label text" for="1963">Antes de 1963</label> <br>
+                    <input name="year" value="Entre 1963 y 1984" id="1963-1984" type="radio">
+                    <label class="label-radio label text" for="1963-1984">Entre 1963 y 1984</label> <br>
+                    <input name="year" value="Entre 1985 y 1997. " id="1985-1997" type="radio">
+                    <label class="label-radio label text" for="1985-1997">Entre 1985 y 1997. </label> <br>
+                    <input name="year" value="Entre 1998 y 2010" id="1998-2010" type="radio">
+                    <label class="label-radio label text" for="1998-2010">Entre 1998 y 2010</label><br>
+                    <input name="year" value="A partir del 2011" id="2011" type="radio">
+                    <label class="label-radio label text" for="2011">A partir del 2011</label> <br>
+                </section>
+                <hr>
+                <h2 class="text">¿Fué su vivienda construida por alguna entidad o empresa constructora?</h2>
+                <section class="pregunta condicion">
+                    <input onclick="condicion('condicional')" name="entidadempresa" value="Si" id="Si" type="radio"
+                        required>
+                    <label class="label-radio label text" for="Si">Si</label> <br>
+                    <section class="pregunta condicion condicional condicionalno">
+                    </section>
+                    <input onclick="condicion('condicionalno')" name="entidadempresa" value="No" id="No" type="radio">
+                    <label class="label-radio label text" for="No">No</label> <br>
+                </section>
+                <!-- mapa -->
+                
+            
+                <div class="containerRow">
+                    <button id="boton" aria-required="true" onclick="mapa(event)"> Permitir la ubicación de dispositivo
+                    </button>
+               
+                   <div  id="spinnerMap"  style="display:none;" class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                  </div>
+              </div>
+
+
+                <div>
+                    <h3 class="text">Tu posición es: <span id="Pos">Desconocida</span></h3>
+                    <h3 id="PosLink"><a target="_blank"></a></h3>
+             
+                </div>
+                <input id="deacuerdo" name="deacuerdo" value="Si" type="checkbox" required>
+                <label class="text label" for="deacuerdo">Autorizo el tratamiento de mis datos.</label><br>
+                <label class="text " for="deacuerdo">En cumplimiento de la Ley 1581 de 2012, por la cual se dictan
+                    disposiciones para la protección de datos personales</label>
+
+            </section>
+            <section class="continuar nocontinuar condicion">
+            </section>
+            <section class="pregunta condicion continuar2"></section>
+            <button onclick="anterior(event)" id="antes" class="before">Anterior</button>
+            <button class="next">Siguiente</button>
+
+
+           <div id="spinnerSentForm" style="display:none;">
+            <div class="sk-chase spinnerSentForm">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+              </div>
+              <label>Guardando</label>
+           </div>
+              
+            <input class="enviar quitar" type="submit" id="sendBtn">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </form>
+        <section class="pregunta condicion finalizar"></section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./inicio secion/script.js"></script>
+    <script src="main.js"></script>
+    <script src="./firebase/firebaseSetForm.js" type="module"></script>
+</body>
+
+</html>

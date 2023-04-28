@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sandstone/bootstrap.min.css" integrity="sha384-zEpdAL7W11eTKeoBJK1g79kgl9qjP7g84KfK3AZsuonx38n8ad+f5ZgXtoSDxPOh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"  crossorigin="anonymous">
+	  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-dark navbarForm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Builder Tester Funlam</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link"  href="#" id="btnForms">Formularios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="btnGraphics">Graficos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="btnSignOut">Cerrar sesion</a>
+              </li>
+            </ul>
+      
+          </div>
+        </div>
+      </nav>
+
+      <div id="formsMap"></div>
+     <div class="dashboardContainer" id="dashboardContainer"></div>
+
+
+      <div class="bodyGraphics" id="divGraphics">
+        <h1 class="Title"> Graficos </h1>
+        <h2 class="Title"> Grafica de años vivienda </h2>
+        <canvas  class= canv id="Grafica_Años_vivienda"></canvas>
+        <h2 class="Title"> Grafica de Fondo Vivienda </h2>
+        <canvas class= canv id="Grafica_Fondo_vivienda"></canvas>
+        <h2 class="Title"> Grafica de Frente Vivienda </h2>
+        <canvas class= canv id="Grafica_Frente_vivienda"></canvas>
+        <h2 class="Title"> Grafica de Area Vivienda </h2>
+        <canvas class= canv id="Grafica_Area_vivienda"></canvas>
+        <h2 class="Title"> Grafica de Elementos Cerca Vivienda </h2>
+        <canvas class= canv id="Grafica_Elementos_Cerca_vivienda"></canvas>
+        <h2 class="Title"> Grafica de uso anterior de la vivienda </h2>
+        <canvas class= canv id="Grafica_hubousoanteriorvivienda_vivienda"></canvas>
+        <h2 class="Title"> Grafica de  numero de pisos </h2>
+        <canvas class= canv id="Grafica_numerodepisos_vivienda"></canvas>
+        <h2 class="Title"> Grafica de Piso vivienda </h2>
+        <canvas class= canv id="Grafica_pisovivienda_vivienda"></canvas>
+        <h2 class="Title"> Grafica de numero de sotanos </h2>
+        <canvas class= canv id="Grafica_numerodesotanos_vivienda"></canvas>
+        <h2 class="Title"> Grafica de compartir muros </h2>
+        <canvas class= canv id="Grafica_compartemuro_vivienda"></canvas>
+        <h2 class="Title"> Grafica de equipos grandes de la vivienda </h2>
+        <canvas class= canv id="Grafica_equiposgrandes_vivienda"></canvas>
+        <h2 class="Title"> Grafica de Altura del piso al techo  </h2>
+        <canvas class= canv id="Grafica_alturapisotecho_vivienda"></canvas>
+        <h2 class="Title"> Grafica de material construccion de la vivienda </h2>
+        <canvas class= canv id="Grafica_materialconstruccion_vivienda"></canvas>
+        <h2 class="Title"> Grafica de tipo de piso </h2>
+        <canvas class= canv id="Grafica_tipopiso_vivienda"></canvas>
+        <h2 class="Title"> Grafica de tipo techo </h2>
+        <canvas class= canv id="Grafica_tipotecho_vivienda"></canvas>
+
+        
+      </div>
+
+      <div id="mapa" ></div>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="dashboard.js" type="module"></script> 
+
+</body>
+</html>

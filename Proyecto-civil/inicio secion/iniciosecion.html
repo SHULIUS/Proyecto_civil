@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!----===== Boxicons CSS ===== -->
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="iniciosecion.css">
+
+
+    <title>Iniciar sesion</title>
+
+</head>
+
+<body class="body">
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img title="Univercidad Catolica Luis Amigó" src="../img/logo.png"
+                        alt="Logo Univercidad Catolica Luis Amigó">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Nombre pagina</span>
+                    <span class="profession">slogan</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+
+
+                <ul class="menu-links">
+
+                    <li class="nav-link">
+
+                        <a href="../index.html" onmouseover="activar('.Formulario')"
+                            onmouseout="desactivar('.Formulario')">
+                            <i class='bx bx-edit icon'></i>
+                            <p class="Formulario activo">Formulario</p>
+
+                            <span class="text nav-text">Ingresar Formulario</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../info/info.html" onmouseover="activar('.info')" onmouseout="desactivar('.info')">
+                            <i class='bx bx-info-circle icon'></i>
+                            <p class="info activo">Más Información</p>
+                            <span class="text nav-text">Acerca del Formulario</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="iniciosecion.html" onmouseover="activar('.Iniciar-sesion')" onmouseout="desactivar('.Iniciar-sesion')">
+                            <i class='bx bx-log-in icon'></i>
+                            <p class="Iniciar-sesion activo">Iniciar Sesión</p>
+                            <span class="text nav-text">Iniciar Sesión</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+            <div class="bottom-content">
+                <li class="salir-sesion">
+                    <a class="" href="#" onmouseover="activar('.salir')" onmouseout="desactivar('.salir')">
+                        <i class='bx bx-log-out icon '></i>
+                        <p class="salir activo">Cerrar Sesión</p>
+                        <span class="text nav-text">Cerrar Sesión</span>
+                    </a>
+                </li>
+                <div class="modo">
+                    <i class='bx bx-moon icon luna'></i>
+                    <i class='bx bx-sun icon sol'></i>
+                </div>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="selector">
+                        <span class="sw"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section style="position: relative;" class="home">
+        <h2 class="text"><u>Nota:</u>Este espacio solo es para administradores</h2>
+        <div class="center">
+            <h1>Iniciar sesion</h1>
+            <form id="formLogin" action="iniciosecion.html" onsubmit="logIn(event)">
+              <div class="txt_field">
+                <input type="text" required name="user">
+                <span></span>
+                <label>Usuario</label>
+              </div>
+              <div class="txt_field">
+                <input type="password" required name="password">
+                <span></span>
+                <label>Contraseña</label>
+              </div>
+              <button id="btnLogin"> Iniciar sesion
+            </button>
+            </form>
+          </div>
+    </section>
+        <script src="script.js"></script>
+</body>
+
+</html>
